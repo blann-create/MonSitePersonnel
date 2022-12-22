@@ -1,0 +1,85 @@
+/*
+Theme Name: Univ-Angers
+Theme URI: wp-test.univ-angers.fr
+Description: Th&egrave;me officiel de l'Universit&eacute; d'Angers
+Author: dsi-appli
+Template: twentyeleven
+
+*/
+@import url('../twentyeleven/style.css');
+
+/*
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  font-size: 13px;
+  font-family: Verdana,Sans-serif;
+}
+*/
+
+.singular .entry-title {
+	font-size: 30px;
+}
+
+
+#site-generator{
+	height: 110px;
+}
+
+#site-generator  img{
+	float: left;
+	margin-left: 50px;
+	margin-top: 12px;
+}
+#site-generator a {
+	/*float: right;*/
+	margin-right: 100px;
+}
+
+#generateur_tw {
+	padding-top: 10px;
+	/*position: absolute;*/
+	text-align: left;
+	margin-left: 70%;
+}
+
+@font-face{
+	font-family: 'Zeroes_Three_UnivAngers';
+	src: url('Zeroes_Three_UnivAngers.ttf');
+}
+
+#site-title a {
+	font-family: Zeroes_Three_UnivAngers, Verdana;
+}
+
+.mitec-puce-ua {
+	border: 1px solid #DFDFDF;
+    margin: 0 7px 0 3px;
+    padding: 4px 14px;
+	background-color: #E5AC00;
+}
+
+input#s {
+    background: url("images/search-find.png") no-repeat scroll 3px 3px transparent;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 1.2em;
+    padding: 4px 10px 4px 28px;
+}
+/* style pour le champ de recherche google */
+input#q {
+    background: url("images/search-find.png") no-repeat scroll 3px 3px transparent;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 1.2em;
+    padding: 4px 10px 4px 28px;
+}
+/* style en !important pou modifier les resultats de recherche google */
+.entry-content table, .comment-content table {
+  border: none !important;
+  margin: 0 0 0 !important;
+}
+/* style en !important pou modifier les resultats de recherche google */
+.gsc-result .gs-title {
+  height: 1.5em !important;
+}

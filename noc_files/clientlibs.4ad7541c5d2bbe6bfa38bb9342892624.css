@@ -1,0 +1,1333 @@
+/*
+  Popover Text 
+
+  Link to standalone example <a target="_blank" href="/splunk-com/WWW-1477-pricing.html">HERE</a>
+
+  Markup:
+
+  Styleguide 7
+*/
+.data-popover-content {
+  position: absolute;
+  left: -20000px;
+  top: -20000px;
+  height: 0;
+  overflow: hidden;
+}
+.popover-sentence {
+  font-size: 14px;
+  color: #474444;
+}
+.popover-text {
+  color: #00a9e0;
+  cursor: pointer;
+}
+.popover.splunk-popover {
+  width: 200px !important;
+  max-width: 200px;
+  background-color: #97999b;
+  color: #fff;
+  border: 1px solid #97999b;
+  font-size: 14px;
+  box-shadow: none;
+  border-radius: 0;
+}
+.popover.splunk-popover .arrow {
+  border-top-color: #97999b;
+  bottom: -8px;
+}
+.popover.splunk-popover .arrow:after {
+  border-top-color: #97999b;
+}
+.popover.splunk-popover .popover-content {
+  padding: 10px;
+}
+
+/*
+  Product Pricing
+
+  Link to standalone example <a target="_blank" href="/splunk-com/WWW-1477-pricing.html">HERE</a>
+
+  Markup:
+
+  Styleguide 6
+*/
+.pricing-start-text {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 0;
+}
+.pricing-number {
+  color: #65a637;
+  padding-bottom: 0;
+}
+
+/*
+  Variables
+
+  Styleguide 1
+*/
+/*
+  Main Font
+
+<pre>
+  @splunkFont: "splunk_data_sans", Helvetica, Arial, sans-serif;
+</pre>
+
+  Styleguide 1.1
+*/
+/*
+  Font Weights
+
+  You can use <b>.splunk-font</b> plus the class modifier to modify the fonts
+
+  .bold - {font-weight: <b>@fw-bold</b>;}
+  .regular - {font-weight: <b>@fw-regular</b>;}
+  .light - {font-weight: <b>@fw-light</b>;}
+  .black - {font-weight: <b>@fw-black</b>;}
+  .extrabold - {font-weight: <b>@fw-extrabold</b>;}
+  .semibold - {font-weight: <b>@fw-semibold</b>;}
+  .italic - {font-style: <b>@fs-italic</b>; }
+
+  Markup:
+  <div class="splunk-font {{modifier_class}}" style="font-size:24px;">
+    Some text to show the result of the modifier class
+  </div>
+
+  Styleguide 1.2
+*/
+.splunk-font.bold {
+  font-weight: bold;
+}
+.splunk-font.regular {
+  font-weight: normal;
+}
+.splunk-font.light {
+  font-weight: 200;
+}
+.splunk-font.black {
+  font-weight: 900;
+}
+.splunk-font.extrabold {
+  font-weight: 800;
+}
+.splunk-font.semibold {
+  font-weight: 600;
+}
+.splunk-font.italic {
+  font-style: italic;
+}
+/*
+  Font Settings
+
+  All the different available font sizes<br>
+  Basic Body Settings:
+  <pre>
+  @body-font-size : 16px;
+  @body-font-size-lg : 18px;
+  @body-line-height : 140%;
+  @body-line-height-lg : 140%;
+  @body-padding-bottom:25px;
+
+  @p-small-font-size : 14px;
+  @p-small-font-size-lg : 16px;
+  @p-padding-bottom:15px;
+  </pre>
+
+  Styleguide 1.3
+*/
+/*
+  H1 Settings
+
+<pre>
+@font-weight-splunk2-h1: @fw-regular-header;
+@font-weight-splunk2-h1-md: @fw-regular-header;
+@font-weight-splunk2-h1-lg: @fw-regular-header;
+
+@font-size-splunk2-h1: 35px;
+@font-size-splunk2-h1-md: 45px;
+@font-size-splunk2-h1-lg: 55px;
+
+@line-height-splunk2-h1: 100%;
+@line-height-splunk2-h1-md: 100%;
+@line-height-splunk2-h1-lg: 100%;
+
+@padding-bot-splunk2-h1: 16px;
+@padding-bot-splunk2-h1-md: 16px;
+@padding-bot-splunk2-h1-lg: 20px;
+
+</pre>
+
+  Styleguide 1.3.1
+*/
+/*
+  H2 Settings
+
+<pre>
+@font-weight-splunk2-h2: @fw-regular-header;
+@font-weight-splunk2-h2-md: @fw-regular-header;
+@font-weight-splunk2-h2-lg: @fw-regular-header;
+
+@font-size-splunk2-h2: 30px;
+@font-size-splunk2-h2-md: 35px;
+@font-size-splunk2-h2-lg: 40px;
+
+@line-height-splunk2-h2: 100%;
+@line-height-splunk2-h2-md: 100%;
+@line-height-splunk2-h2-lg: 100%;
+
+@padding-bot-splunk2-h2: 15px;
+@padding-bot-splunk2-h2-md: 15px;
+@padding-bot-splunk2-h2-lg: 20px;
+</pre>
+
+  Styleguide 1.3.2
+*/
+/*
+  H3 Settings
+
+<pre>
+@font-weight-splunk2-h3: @fw-regular-header;
+@font-weight-splunk2-h3-md: @fw-regular-header;
+@font-weight-splunk2-h3-lg: @fw-regular-header;
+
+@font-size-splunk2-h3: 24px;
+@font-size-splunk2-h3-md: 27px;
+@font-size-splunk2-h3-lg: 30px;
+
+@line-height-splunk2-h3: 100%;
+@line-height-splunk2-h3-md: 100%;
+@line-height-splunk2-h3-lg: 100%;
+
+@padding-bot-splunk2-h3: 15px;
+@padding-bot-splunk2-h3-md: 15px;
+@padding-bot-splunk2-h3-lg: 20px;
+</pre>
+
+  Styleguide 1.3.3
+*/
+/*
+  H4 Settings
+
+<pre>
+@font-weight-splunk2-h4: @fw-regular-header;
+@font-weight-splunk2-h4-md: @fw-regular-header;
+@font-weight-splunk2-h4-lg: @fw-regular-header;
+
+@font-size-splunk2-h4: 18px;
+@font-size-splunk2-h4-md: 20px;
+@font-size-splunk2-h4-lg: 21px;
+
+@line-height-splunk2-h4: 100%;
+@line-height-splunk2-h4-md: 100%;
+@line-height-splunk2-h4-lg: 100%;
+
+@padding-bot-splunk2-h4: 15px;
+@padding-bot-splunk2-h4-md: 15px;
+@padding-bot-splunk2-h4-lg: 20px;
+</pre>
+
+  Styleguide 1.3.4
+*/
+/*
+  H5 Settings
+
+<pre>
+@font-weight-splunk2-h5: @fw-regular-header;
+@font-weight-splunk2-h5-md: @fw-regular-header;
+@font-weight-splunk2-h5-lg: @fw-regular-header;
+
+@font-size-splunk2-h5: 16px;
+@font-size-splunk2-h5-md: 16px;
+@font-size-splunk2-h5-lg: 18px;
+
+@line-height-splunk2-h5: 100%;
+@line-height-splunk2-h5-md: 100%;
+@line-height-splunk2-h5-lg: 100%;
+
+@padding-bot-splunk2-h5: 15px;
+@padding-bot-splunk2-h5-md: 15px;
+@padding-bot-splunk2-h5-lg: 20px;
+</pre>
+
+  Styleguide 1.3.5
+*/
+/*
+  H6 Settings
+
+<pre>
+@font-weight-splunk2-h6: @fw-regular-header;
+@font-weight-splunk2-h6-md: @fw-regular-header;
+@font-weight-splunk2-h6-lg: @fw-regular-header;
+
+@font-size-splunk2-h6: 14px;
+@font-size-splunk2-h6-md: 14px;
+@font-size-splunk2-h6-lg: 16px;
+
+@line-height-splunk2-h6: 100%;
+@line-height-splunk2-h6-md: 100%;
+@line-height-splunk2-h6-lg: 100%;
+
+@padding-bot-splunk2-h6: 15px;
+@padding-bot-splunk2-h6-md: 15px;
+@padding-bot-splunk2-h6-lg: 20px;
+</pre>
+
+  Styleguide 1.3.6
+*/
+/*
+  H7 Settings
+
+<pre>
+@font-weight-splunk2-h7: @fw-regular-header;
+@font-weight-splunk2-h7-md: @fw-regular-header;
+@font-weight-splunk2-h7-lg: @fw-regular-header;
+
+@font-size-splunk2-h7: 16px;
+@font-size-splunk2-h7-md: 18px;
+@font-size-splunk2-h7-lg: 18px;
+
+@line-height-splunk2-h7: 120%;
+@line-height-splunk2-h7-md: 120%;
+@line-height-splunk2-h7-lg: 120%;
+
+@padding-bot-splunk2-h7: 15px;
+@padding-bot-splunk2-h7-md: 15px;
+@padding-bot-splunk2-h7-lg: 15px;
+</pre>
+
+  Styleguide 1.3.7
+*/
+/*
+  Lead Text Settings
+
+<pre>
+@font-size-splunk2-lead-lg-mobile: 24px; //mobile version
+@font-size-splunk2-lead-lg: 30px; // desktop
+@line-height-splunk2-lead-lg-mobile: 100%;
+@line-height-splunk2-lead-lg: 120%;
+@padding-bot-splunk2-lead-lg-mobile: 15px;
+@padding-bot-splunk2-lead-lg: 20px;
+
+@font-size-splunk2-lead-md-mobile: 18px;
+@font-size-splunk2-lead-md: 21px;
+@line-height-splunk2-lead-md-mobile: 100%;
+@line-height-splunk2-lead-md: 120%;
+@padding-bot-splunk2-lead-md-mobile: 15px;
+@padding-bot-splunk2-lead-md: 20px;
+
+@font-size-splunk2-lead-mobile: 16px;
+@font-size-splunk2-lead: 18px;
+@line-height-splunk2-lead-mobile: 100%;
+@line-height-splunk2-lead: 120%;
+@padding-bot-splunk2-lead-mobile: 15px;
+@padding-bot-splunk2-lead: 20px;
+</pre>
+
+  Styleguide 1.3.8
+*/
+/*
+  Subhead Text Settings
+
+<pre>
+@font-weight-splunk-subhead: normal;
+
+@font-size-splunk-subhead-sm: 21px;
+@font-size-splunk-subhead-md: 24px;
+@font-size-splunk-subhead-lg: 30px;
+
+@font-size-splunk-subhead-sm-mobile: 18px;
+@font-size-splunk-subhead-md-mobile: 21px;
+@font-size-splunk-subhead-lg-mobile: 24px;
+
+@line-height-splunk-subhead-sm: 120%;
+@line-height-splunk-subhead-md: 120%;
+@line-height-splunk-subhead-lg: 120%;
+
+@padding-bot-splunk-subhead: 20px;
+@padding-bot-splunk-subhead-mobile: 15px;
+</pre>
+
+  Styleguide 1.3.9
+*/
+/*
+  Eyebrow Text Settings
+
+<pre>
+@font-size-splunk-eyebrow: 12px;
+@font-size-splunk-eyebrow-lg: 14px;
+
+@line-height-splunk-eyebrow: 100%;
+@line-height-splunk-eyebrow-lg: 100%;
+</pre>
+
+  Styleguide 1.3.10
+*/
+/*
+  Category tag/Small title Settings
+
+  <pre>
+  @font-size-splunk-tag: 12px;
+  @line-height-splunk-tag: 100%;
+  </pre>
+
+  Styleguide 1.3.11
+*/
+/*
+  Breakpoints
+
+  <code>
+  @splunkiPadBreakpoint : 768px;
+  @splunkGridBreakpoint : 480px;
+  </code>
+
+  Styleguide 1.4
+*/
+/*
+  Button variables
+
+<pre>
+@btn-font-weight: @fw-bold;
+@btn-default-color: @splunkWhite;
+
+@padding-base-vertical: 10px;
+@padding-base-horizontal: 20px;
+
+@padding-small-vertical: 4px;
+@padding-small-horizontal: 8px;
+
+@padding-medium-vertical: 10px;
+@padding-medium-horizontal: 35px;
+
+@padding-large-vertical: 20px;
+@padding-large-horizontal: 35px;
+
+@font-size-base: 16px;
+@line-height-base: 100%;
+@btn-border-radius-base: 2px;
+</pre>
+
+  Styleguide 1.5
+*/
+/*
+  Component Backgrounds
+
+  We have two different colors for the components backgrounds.<br>
+  <b>NOTE: The gray background we use is #f7f7f7 - it is not defined on the variables</b>
+
+  .splunk2-background-gray - gray
+
+  Markup:
+  <div class="{{modifier_class}}" style="border:1px solid #cccccc;">
+    Example componentnts background<br>
+    <br>
+    <br>
+  </div>
+
+  Styleguide 1.6
+*/
+.splunk2-background-white {
+  background-color: #ffffff;
+}
+.splunk2-background-gray {
+  background-color: #f7f7f7;
+}
+.splunk2-background {
+  background-size: cover;
+  background-position: center center;
+}
+/*
+  Alignment Center
+
+  Markup:
+  <div class="centered">
+    Hello I am centered text
+  </div>
+
+  Styleguide 1.7
+*/
+.centered {
+  text-align: center !important;
+}
+/*
+  Variables - Colors
+
+  You can use <b>.splunk2-color</b> plus the class modifier to change an elements text color.<br>
+  Or you can use  <b>.splunk2-background</b> plus the class modifier to change an elements background
+
+  .splunk-green - {color:@splunkGreen;}
+  .splunk-green-cta - {color:@splunkGreenCTA;}
+  .splunk-green-dark - {color:@splunkGreenDark;}
+  .splunk-green-darkest - {color:@splunkGreenDarkest;}
+  .splunk-green-mint - {color:@splunkGreenMint;}
+  .splunk-blue - {color:@splunkBlue}
+  .splunk-blue-light - {color:@splunkBlueLight}
+  .splunk-blue-lightest - {color:@splunkBlueLightest}
+  .splunk-blue-dark - {color:@splunkBlueDark}
+  .splunk-black - {color:@splunkBlack}  
+  .splunk-gray-darkest - {color:@splunkGrayDarkest}
+  .splunk-gray-darker - {color:@splunkGrayDarker}
+  .splunk-gray-dark - {color:@splunkGrayDark}
+  .splunk-gray - {color:@splunkGray}
+  .splunk-gray-light - {color:@splunkGrayLight}
+  .splunk-gray-lightest - {color:@splunkGrayLightest}
+  .splunk-white - {color:@splunkWhite}
+  .splunk-burgundy - {color:@splunkBurgundy}
+  .splunk-orange - {color:@splunkOrange}
+  .splunk-orange-light - {color:@splunkOrangeLight}
+
+  Markup:
+  <span class="circle-example splunk2-background {{modifier_class}}"></span>
+  <div class="splunk2-color {{modifier_class}}">Colored Text</div>
+  <div class="splunk2-top-border {{modifier_class}}" style="margin-top:5px;">Top border with color</div>
+
+  Styleguide 1.8
+*/
+.circle-example {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d5dce5;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+.splunk2-color.splunk-green {
+  color: #65a637;
+}
+.splunk2-color.splunk-green-cta {
+  color: #2eb50b;
+}
+.splunk2-color.splunk-green-dark {
+  color: #197301;
+}
+.splunk2-color.splunk-green-darkest {
+  color: #115000;
+}
+.splunk2-color.splunk-green-mint {
+  color: #00afaa;
+}
+.splunk2-color.splunk-blue {
+  color: #0070f3;
+}
+.splunk2-color.splunk-blue-light {
+  color: #00a9e0;
+}
+.splunk2-color.splunk-blue-lightest {
+  color: #75dafa;
+}
+.splunk2-color.splunk-blue-dark {
+  color: #005f86;
+}
+.splunk2-color.splunk-highlight {
+  color: #eb008b;
+}
+.splunk2-color.splunk-highlight p {
+  color: #eb008b;
+}
+.splunk2-color.splunk-gray-darkest {
+  color: #0c1724;
+}
+.splunk2-color.splunk-gray-darker {
+  color: #363c44;
+}
+.splunk2-color.splunk-gray-dark {
+  color: #656c76;
+}
+.splunk2-color.splunk-gray {
+  color: #969daa;
+}
+.splunk2-color.splunk-gray-light {
+  color: #d5dce5;
+}
+.splunk2-color.splunk-gray-lightest {
+  color: #f0f3f7;
+}
+.splunk2-color.splunk-white {
+  color: #ffffff;
+}
+.splunk2-color.splunk-black {
+  color: #000000;
+}
+.splunk2-color.splunk-burgundy {
+  color: #79232e;
+}
+.splunk2-color.splunk-orange {
+  color: #f99d1c;
+}
+.splunk2-color.splunk-orange-light {
+  color: #f2a900;
+}
+.splunk2-color.splunk-pink {
+  color: #ed0080;
+}
+.splunk-color.splunk-green {
+  color: #65a637;
+}
+.splunk-color.splunk-green p {
+  color: #65a637;
+}
+.splunk-color.splunk-green-cta {
+  color: #2eb50b;
+}
+.splunk-color.splunk-green-cta p {
+  color: #2eb50b;
+}
+.splunk-color.splunk-green-dark {
+  color: #197301;
+}
+.splunk-color.splunk-green-dark p {
+  color: #197301;
+}
+.splunk-color.splunk-green-darkest {
+  color: #115000;
+}
+.splunk-color.splunk-green-darkest p {
+  color: #115000;
+}
+.splunk-color.splunk-green-mint {
+  color: #00afaa;
+}
+.splunk-color.splunk-green-mint p {
+  color: #00afaa;
+}
+.splunk-color.splunk-blue {
+  color: #0070f3;
+}
+.splunk-color.splunk-blue p {
+  color: #0070f3;
+}
+.splunk-color.splunk-blue-light {
+  color: #00a9e0;
+}
+.splunk-color.splunk-blue-light p {
+  color: #00a9e0;
+}
+.splunk-color.splunk-blue-lightest {
+  color: #75dafa;
+}
+.splunk-color.splunk-blue-lightest p {
+  color: #75dafa;
+}
+.splunk-color.splunk-blue-dark {
+  color: #005f86;
+}
+.splunk-color.splunk-blue-dark p {
+  color: #005f86;
+}
+.splunk-color.splunk-highlight {
+  color: #eb008b;
+}
+.splunk-color.splunk-highlight p {
+  color: #eb008b;
+}
+.splunk-color.splunk-gray-darkest {
+  color: #0c1724;
+}
+.splunk-color.splunk-gray-darkest p {
+  color: #0c1724;
+}
+.splunk-color.splunk-gray-darker {
+  color: #363c44;
+}
+.splunk-color.splunk-gray-darker p {
+  color: #363c44;
+}
+.splunk-color.splunk-gray-dark {
+  color: #656c76;
+}
+.splunk-color.splunk-gray-dark p {
+  color: #656c76;
+}
+.splunk-color.splunk-gray {
+  color: #969daa;
+}
+.splunk-color.splunk-gray p {
+  color: #969daa;
+}
+.splunk-color.splunk-gray-light {
+  color: #d5dce5;
+}
+.splunk-color.splunk-gray-light p {
+  color: #d5dce5;
+}
+.splunk-color.splunk-gray-lightest {
+  color: #f0f3f7;
+}
+.splunk-color.splunk-gray-lightest p {
+  color: #f0f3f7;
+}
+.splunk-color.splunk-white {
+  color: #ffffff;
+}
+.splunk-color.splunk-white p {
+  color: #ffffff;
+}
+.splunk-color.splunk-black {
+  color: #000000;
+}
+.splunk-color.splunk-black p {
+  color: #000000;
+}
+.splunk-color.splunk-burgundy {
+  color: #79232e;
+}
+.splunk-color.splunk-burgundy p {
+  color: #79232e;
+}
+.splunk-color.splunk-orange {
+  color: #f99d1c;
+}
+.splunk-color.splunk-orange p {
+  color: #f99d1c;
+}
+.splunk-color.splunk-orange-light {
+  color: #f2a900;
+}
+.splunk-color.splunk-orange-light p {
+  color: #f2a900;
+}
+.splunk2-background.splunk-green {
+  background-color: #65a637;
+}
+.splunk2-background.splunk-green-cta {
+  background-color: #2eb50b;
+}
+.splunk2-background.splunk-green-dark {
+  background-color: #197301;
+}
+.splunk2-background.splunk-green-darkest {
+  background-color: #115000;
+}
+.splunk2-background.splunk-green-mint {
+  background-color: #00afaa;
+}
+.splunk2-background.splunk-blue {
+  background-color: #0070f3;
+}
+.splunk2-background.splunk-blue-light {
+  background-color: #00a9e0;
+}
+.splunk2-background.splunk-blue-lightest {
+  background-color: #75dafa;
+}
+.splunk2-background.splunk-blue-dark {
+  background-color: #005f86;
+}
+.splunk2-background.splunk-gray-darkest {
+  background-color: #0c1724;
+}
+.splunk2-background.splunk-gray-darker {
+  background-color: #363c44;
+}
+.splunk2-background.splunk-gray-dark {
+  background-color: #656c76;
+}
+.splunk2-background.splunk-gray {
+  background-color: #969daa;
+}
+.splunk2-background.splunk-gray-light {
+  background-color: #d5dce5;
+}
+.splunk2-background.splunk-gray-lightest {
+  background-color: #f0f3f7;
+}
+.splunk2-background.splunk-white {
+  background-color: #ffffff;
+}
+.splunk2-background.splunk-black {
+  background-color: #000000;
+}
+.splunk2-background.splunk-burgundy {
+  background-color: #79232e;
+}
+.splunk2-background.splunk-orange {
+  background-color: #f99d1c;
+}
+.splunk2-background.splunk-orange-light {
+  background-color: #f2a900;
+}
+.splunk2-background.splunk-pink,
+.splunk2-background.splunk-catPink {
+  background-color: #ed0080;
+}
+.splunk2-background.splunk-gradient {
+  background-image: linear-gradient(-30deg, #f99d1c 8.98%, #f99c1c 9.4%, #f4781f 21.71%, #f16221 31.74%, #f05a22 38.17%, #ee1d62 64.89%, #ed0080 76.39%);
+}
+.splunk-background.splunk-green {
+  background-color: #65a637;
+}
+.splunk-background.splunk-green-cta {
+  background-color: #2eb50b;
+}
+.splunk-background.splunk-green-dark {
+  background-color: #197301;
+}
+.splunk-background.splunk-green-darkest {
+  background-color: #115000;
+}
+.splunk-background.splunk-green-mint {
+  background-color: #00afaa;
+}
+.splunk-background.splunk-blue {
+  background-color: #0070f3;
+}
+.splunk-background.splunk-blue-light {
+  background-color: #00a9e0;
+}
+.splunk-background.splunk-blue-lightest {
+  background-color: #75dafa;
+}
+.splunk-background.splunk-blue-dark {
+  background-color: #005f86;
+}
+.splunk-background.splunk-gray-darkest {
+  background-color: #0c1724;
+}
+.splunk-background.splunk-gray-darker {
+  background-color: #363c44;
+}
+.splunk-background.splunk-gray-dark {
+  background-color: #656c76;
+}
+.splunk-background.splunk-gray {
+  background-color: #969daa;
+}
+.splunk-background.splunk-gray-light {
+  background-color: #d5dce5;
+}
+.splunk-background.splunk-gray-lightest {
+  background-color: #f0f3f7;
+}
+.splunk-background.splunk-white {
+  background-color: #ffffff;
+}
+.splunk-background.splunk-black {
+  background-color: #000000;
+}
+.splunk-background.splunk-burgundy {
+  background-color: #79232e;
+}
+.splunk-background.splunk-orange {
+  background-color: #f99d1c;
+}
+.splunk-background.splunk-orange-light {
+  background-color: #f2a900;
+}
+.splunk-background.splunk-pink,
+.splunk-background.splunk-catPink {
+  background-color: #ed0080;
+}
+.splunk-background.splunk-gradient {
+  background-image: linear-gradient(-30deg, #f99d1c 8.98%, #f99c1c 9.4%, #f4781f 21.71%, #f16221 31.74%, #f05a22 38.17%, #ee1d62 64.89%, #ed0080 76.39%);
+}
+.splunk2-top-border {
+  border-top: 1px solid #d5dce5;
+}
+.splunk2-top-border.splunk-green {
+  border-top: 1px solid #65a637;
+}
+.splunk2-top-border.splunk-green-dark {
+  border-top: 1px solid #197301;
+}
+.splunk2-top-border.splunk-green-darkest {
+  border-top: 1px solid #115000;
+}
+.splunk2-top-border.splunk-green-mint {
+  border-top: 1px solid #00afaa;
+}
+.splunk2-top-border.splunk-blue {
+  border-top: 1px solid #0070f3;
+}
+.splunk2-top-border.splunk-blue-light {
+  border-top: 1px solid #00a9e0;
+}
+.splunk2-top-border.splunk-blue-lightest {
+  border-top: 1px solid #75dafa;
+}
+.splunk2-top-border.splunk-blue-dark {
+  border-top: 1px solid #005f86;
+}
+.splunk2-top-border.splunk-gray-darkest {
+  border-top: 1px solid #0c1724;
+}
+.splunk2-top-border.splunk-gray-darker {
+  border-top: 1px solid #363c44;
+}
+.splunk2-top-border.splunk-gray-dark {
+  border-top: 1px solid #656c76;
+}
+.splunk2-top-border.splunk-gray {
+  border-top: 1px solid #969daa;
+}
+.splunk2-top-border.splunk-gray-light {
+  border-top: 1px solid #d5dce5;
+}
+.splunk2-top-border.splunk-gray-lightest {
+  border-top: 1px solid #f0f3f7;
+}
+.splunk2-top-border.splunk-white {
+  border-top: 1px solid #ffffff;
+}
+.splunk2-top-border.splunk-black {
+  border-top: 1px solid #000000;
+}
+.splunk2-top-border.splunk-burgundy {
+  border-top: 1px solid #79232e;
+}
+.splunk2-top-border.splunk-orange {
+  border-top: 1px solid #f99d1c;
+}
+.splunk2-top-border.splunk-orange-light {
+  border-top: 1px solid #f2a900;
+}
+.splunk-top-border {
+  border-top: 1px solid #d5dce5;
+}
+.splunk-top-border.splunk-green {
+  border-top: 1px solid #65a637;
+}
+.splunk-top-border.splunk-green-dark {
+  border-top: 1px solid #197301;
+}
+.splunk-top-border.splunk-green-darkest {
+  border-top: 1px solid #115000;
+}
+.splunk-top-border.splunk-green-mint {
+  border-top: 1px solid #00afaa;
+}
+.splunk-top-border.splunk-blue {
+  border-top: 1px solid #0070f3;
+}
+.splunk-top-border.splunk-blue-light {
+  border-top: 1px solid #00a9e0;
+}
+.splunk-top-border.splunk-blue-lightest {
+  border-top: 1px solid #75dafa;
+}
+.splunk-top-border.splunk-blue-dark {
+  border-top: 1px solid #005f86;
+}
+.splunk-top-border.splunk-gray-darkest {
+  border-top: 1px solid #0c1724;
+}
+.splunk-top-border.splunk-gray-darker {
+  border-top: 1px solid #363c44;
+}
+.splunk-top-border.splunk-gray-dark {
+  border-top: 1px solid #656c76;
+}
+.splunk-top-border.splunk-gray {
+  border-top: 1px solid #969daa;
+}
+.splunk-top-border.splunk-gray-light {
+  border-top: 1px solid #d5dce5;
+}
+.splunk-top-border.splunk-gray-lightest {
+  border-top: 1px solid #f0f3f7;
+}
+.splunk-top-border.splunk-white {
+  border-top: 1px solid #ffffff;
+}
+.splunk-top-border.splunk-black {
+  border-top: 1px solid #000000;
+}
+.splunk-top-border.splunk-burgundy {
+  border-top: 1px solid #79232e;
+}
+.splunk-top-border.splunk-orange {
+  border-top: 1px solid #f99d1c;
+}
+.splunk-top-border.splunk-orange-light {
+  border-top: 1px solid #f2a900;
+}
+/*
+  Splunk Icons
+
+<div>
+<b>To add fonts, we need to re export from icomoon and add to:</b><br>
+&nbsp;&nbsp;splunk-com/fonts/icomoon<br>
+&nbsp;&nbsp;splunk-core/source/fonts/icomoon<br>
+<b>Note: Fix path on icomoon exported css, Find and replace:</b><br>
+&nbsp;&nbsp;Find: "fonts/icomoon"<br>
+&nbsp;&nbsp;Repl: "../fonts/icomoon/icomoon"<br><br>
+</div>
+
+  .success - Green State
+  .blue - Blue State
+  .gray - Gray State
+
+  Markup:
+  <span class="splunk-icon icon-expanded-splunk-facebook {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-googleplus {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-instagram {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-linkedIn {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-twitter {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-youtube {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunkcom-hamburger {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-close-btn {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-languages-globe {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-search-icon {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-logo {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunk-sites {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-user-icon {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-answers {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-blogs {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-community {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-conf {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-dev {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-docs {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunkbase {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-usergroups {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunklive {{modifier_class}}"></span>
+  <span class="splunk-icon icon-check-circle {{modifier_class}}"></span>
+  <span class="splunk-icon icon-chevron-down {{modifier_class}}"></span>
+  <span class="splunk-icon icon-chevron-up {{modifier_class}}"></span>
+  <span class="splunk-icon icon-arrow-right {{modifier_class}}"></span>
+  <span class="splunk-icon icon-arrow-left {{modifier_class}}"></span>
+  <span class="splunk-icon icon-plus-circle {{modifier_class}}"></span>
+  <span class="splunk-icon icon-minus-circle {{modifier_class}}"></span>
+  <span class="splunk-icon icon-check {{modifier_class}}"></span>
+  <span class="splunk-icon icon-question-circle {{modifier_class}}"></span>
+  <span class="splunk-icon icon-film {{modifier_class}}"></span>
+  <span class="splunk-icon icon-download {{modifier_class}}"></span>
+  <span class="splunk-icon icon-cloud {{modifier_class}}"></span>
+  <span class="splunk-icon icon-envelope {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunk-video {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunk-pdf {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunk-newspaper {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunk-bookmark {{modifier_class}}"></span>
+  <span class="splunk-icon icon-splunk-home {{modifier_class}}"></span>
+  <span class="splunk-icon icon-expanded-splunktv {{modifier_class}}"></span>
+
+  Styleguide 4.1
+
+*/
+.splunk-icon {
+  color: #2d2d2d;
+}
+.splunk-icon.success {
+  color: #65a637;
+}
+.splunk-icon.blue {
+  color: #0070f3;
+}
+.splunk-icon.gray {
+  color: #969daa;
+}
+/*
+
+  Bootstrap Icons
+
+  Glyphicons by bootstrap available on: <a href="http://getbootstrap.com/components/">Bootsrap Icons</a><br>
+  If the <b>splunk-icon</b> class is used the same states will become available.
+
+  .success - Green State
+  .blue - Blue State
+  .gray - Gray State
+
+  Markup:
+  <span class="splunk-icon glyphicon glyphicon-asterisk {{modifier_class}}"></span>
+  <span class="splunk-icon glyphicon glyphicon-plus {{modifier_class}}"></span>
+
+
+  Styleguide 4.2
+*/
+/*
+
+  Icon Sizes
+
+  Styleguide 4.3
+
+*/
+.sp-icon-size.sm {
+  width: 48px !important;
+  height: 48px !important;
+}
+.sp-icon-size.md {
+  width: 64px !important;
+  height: 64px !important;
+}
+.sp-icon-size.lg {
+  width: 80px !important;
+  height: 80px !important;
+}
+/*
+  M&T Component
+
+  Media and Text Component<br>
+  The different modifier <strong>classes</strong> are:<br>
+  <strong>Width:</strong>
+  <ul>
+    <li>.width-28</li>
+    <li>.width-50</li>
+    <li>.width-33</li>
+  </ul>
+  <strong>Float:</strong>
+  <ul>
+    <li>.float-left</li>
+    <li>.float-right</li>
+  </ul>
+  <strong>Wrap Text:</strong>
+  <ul>
+    <li>wrapped by default</li>
+    <li>.unwrap-text</li>
+  </ul>
+
+  Styleguide 2
+*/
+/*
+  M&T Variation 1
+
+  Variation 1 available for Campaing Landing Page, 50-50 column %
+
+  Markup:
+  <div class="media-and-text float-left width-50 unwrap-text">
+    <div class="image-container">
+      <img src="https://www.splunk.com/content/dam/splunk2/images/insights.jpg" />
+    </div>
+    <div class="rte-container">
+      <p>
+        <span class="splunk-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </p>
+      <p>
+        <span class="splunk-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       </span>
+      </p>
+      <ul class="splunk-list splunk-body list-arrow splunk-list-blue-light ">
+        <li><a href="#">Call to action</a></li>
+      </ul>
+    </div>
+  </div>
+
+  Styleguide 2.1
+*/
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.clearfix {
+  width: 100%;
+  clear: both;
+}
+.media-and-text.float-left .image-container {
+  float: left;
+}
+.media-and-text.float-left .rte-container li {
+  display: table;
+}
+.media-and-text.float-right .image-container {
+  float: right;
+}
+.media-and-text .author {
+  margin-top: 10px;
+  font-size: 15px;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  padding-left: 12px;
+  display: block;
+  margin-left: 39px;
+}
+.media-and-text .author:before {
+  content: "\2014" "\202F";
+  position: absolute;
+  left: 0;
+}
+.media-and-text .image-container {
+  padding: 15px;
+  padding-top: 0;
+  text-align: center;
+}
+.media-and-text .image-container img {
+  width: 100%;
+}
+.media-and-text .image-container.image-container-circle {
+  text-align: center;
+  padding: 0 !important;
+}
+.media-and-text .image-container.image-container-circle .circle-image-wrapper {
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 1px #d5dce5;
+  width: 95px;
+  height: 95px;
+  padding: 0 !important;
+  margin: 0 auto;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.media-and-text.width-28 .image-container {
+  width: 28%;
+}
+.media-and-text.width-50 .image-container {
+  width: 50%;
+}
+.media-and-text.width-33 .image-container {
+  width: 33%;
+}
+.media-and-text.image-icon-size .image-container {
+  width: auto;
+  height: auto;
+}
+.media-and-text.image-icon-size.sm img {
+  width: 48px !important;
+  height: 48px;
+}
+.media-and-text.image-icon-size.md img {
+  width: 64px !important;
+  height: 64px;
+}
+.media-and-text.image-icon-size.lg img {
+  width: 80px !important;
+  height: 80px;
+}
+.media-and-text.unwrap-text {
+  display: flex;
+  flex-direction: row;
+}
+.media-and-text.unwrap-text.float-right .image-container {
+  order: 2;
+}
+.media-and-text.unwrap-text > .div {
+  flex-grow: 1;
+}
+.media-and-text.unwrap-text.width-28 .image-container {
+  flex-basis: 28%;
+}
+.media-and-text.unwrap-text.width-28 .rte-container {
+  width: 72%;
+}
+.media-and-text.unwrap-text.width-50 .image-container {
+  flex: 1;
+}
+.media-and-text.unwrap-text.width-50 .rte-container {
+  flex: 1;
+  width: 50%;
+}
+.media-and-text.unwrap-text.width-33 .image-container {
+  flex-basis: 33%;
+}
+.media-and-text.unwrap-text.width-33 .rte-container {
+  width: 67%;
+}
+@media (max-width: 480px) {
+  .media-and-text.unwrap-text {
+    display: block;
+  }
+  .media-and-text.unwrap-text.bootstrap-responsiveness-reverse {
+    display: flex;
+  }
+  .media-and-text.unwrap-text .image-container {
+    width: 100% !important;
+    float: none;
+  }
+}
+@media (max-width: 767px) {
+  .media-and-text.unwrap-text.width-28 .rte-container {
+    width: 100%;
+  }
+  .media-and-text.unwrap-text.width-50 .rte-container {
+    flex: 1;
+    width: 100%;
+  }
+  .media-and-text.unwrap-text.width-33 .image-container {
+    flex-basis: 33%;
+  }
+  .media-and-text.unwrap-text.width-33 .rte-container {
+    width: 100%;
+  }
+}
+a.splunk-education-retake-challenge {
+  cursor: pointer;
+}
+/*
+  M&T Variation 2
+
+  Variation available for Campaing Landing Thank You Page, 67-33 column %, Image floats right
+
+  Markup:
+  <div class="media-and-text float-right width-33">
+    <div class="image-container">
+      <img src="https://www.splunk.com/content/dam/splunk2/images/insights.jpg" />
+    </div>
+    <div class="rte-container">
+      <p>
+        <span class="splunk-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </p>
+      <p>
+        <span class="splunk-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       </span>
+      </p>
+      <ul class="splunk-list splunk-body list-arrow splunk-list-green ">
+        <li>This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.</li>
+        <li>This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.  </li>
+        <li>This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.  </li>
+      </ul>
+    </div>
+  </div>
+
+  Styleguide 2.2
+*/
+/*
+  M&T Variation 3
+
+  Variation available for Campaing Landing Page, 28-80 column %, Text does not wrap over image
+
+  Markup:
+  <div class="media-and-text float-left unwrap-text width-28">
+    <div class="image-container image-container-circle">
+      <div class="circle-image-wrapper">
+        <img src="https://www.splunk.com/content/dam/splunk2/images/insights.jpg" />
+      </div>
+    </div>
+    <div class="rte-container">
+      <div class="splunk-blockquote splunk-color splunk-gray-dark">
+        <blockquote>
+          We believe this industry-leading position is a reflection of the market fully embracing an analytics-driven approach to security and a testament to the strength of our security platform and the success our customers have achieved. As we continue to introduce new capabilities such as Adaptive Response, we will further strengthen the security posture of Splunk ES as the nerve center for security operations.
+          <span class="author splunk-color splunk-green-dark">Haiyan Song, Senior Vice President of Security Markets, Splunk</span>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  Styleguide 2.3
+*/
+/*
+  M&T Variation 4
+
+  Variation available for Campaing Landing Page, 50-50 column %, image does not stack on mobile view
+
+  Markup:
+  <div class="media-and-text float-left width-50 unwrap-text bootstrap-responsiveness-reverse">
+    <div class="image-container">
+      <img src="https://www.splunk.com/content/dam/splunk2/images/insights.jpg" />
+    </div>
+    <div class="rte-container">
+      <p>
+        <span class="splunk-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </p>
+      <p>
+        <span class="splunk-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+       </span>
+      </p>
+      <ul class="splunk-list splunk-body list-arrow splunk-list-blue-light ">
+        <li><a href="#">Call to action</a></li>
+      </ul>
+    </div>
+  </div>
+
+  Styleguide 2.4
+*/
+

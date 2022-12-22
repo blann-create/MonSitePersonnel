@@ -1,0 +1,94 @@
+// WWW-1477: UI - Pricing page component, 04/2018
+$(function(){
+  
+    //get the popoverTemplate with the necessary js
+    var popoverTemplate = _.template('<div class="popover splunk-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>');
+    var popover_events = ($('html').hasClass('mobile')) ? 'click touchstart' : 'hover';
+  
+    function createPopover() {
+      if ($('.popover-text').length > 0) {
+  
+        $('.personalizedContentdisplay, .textImage').each(function(index){
+          var popoverContents = $(this).find('.data-popover-content');
+          $(this).find('.popover-text').each(function(index){
+            $(this).attr({
+              'data-placement': 'top',
+              'data-toggle': 'popover',
+              'data-content': popoverContents.eq(index).text().trim()
+            });
+          });
+        });
+  
+        //iterate over the items and set the proper color and size
+        _.each($(".popover-text"), function(item, index) {
+          var placement = $(item).data("placement");
+          var content = $(item).data("content");
+          var render = popoverTemplate();
+  
+          $(item).popover({
+              template: render,
+              placement: placement,
+              trigger: popover_events,
+              content : content
+          });
+        });
+  
+      }
+    }
+    createPopover();
+  
+    // hide the popover with click outside the target, only for mobile
+    // desktop is triggered by hover event
+    $('body').on(popover_events, function (e) {
+        if ($(e.target).data('toggle') !== 'popover' && $(e.target).parents('[data-toggle="popover"]').length === 0 && $(e.target).parents('.popover.in').length === 0) {
+            $('[data-toggle="popover"]').popover('hide');
+        }
+    });
+  
+    // hide other popovers when one is being triggered to open, only for mobile
+    // desktop is triggered by hover event
+    $(".popover-text").on(popover_events, function(e){
+      $(".popover-text").not($(e.target)).popover('hide');
+    });
+  
+    function checkReference(){
+        // if ($('.target').length > 0) {
+        //     var loaded = 0;
+        //     $('.target .campaign').each(function(){
+        //         var htmlCode = $(this).find('.reference').html();
+        //         if (htmlCode !== undefined) {
+        //             loaded ++;
+        //         }
+        //     })
+        //     if (loaded === $('.target .campaign').length) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        if ($('.personalizedContentdisplay').length > 0) {
+            var loaded = 0;
+            $('.personalizedContentdisplay').each(function(){
+                var htmlCode = $(this).html().trim();
+                if (htmlCode !== "") {
+                    loaded ++;
+                }
+            });
+            if (loaded === $('.personalizedContentdisplay').length) {
+                return true;
+            } else {
+                return false;
+            }
+        }      
+    }
+  
+    // for referenc components, like pricing modules
+    var timer = setInterval(function(){
+        var referenceCompsLoaded = checkReference();
+        if (referenceCompsLoaded) {
+            createPopover();
+            clearInterval(timer);
+        }
+    },100);
+  
+  });
